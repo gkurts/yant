@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yantApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/scripts/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/scripts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-controller="TodoController as controller">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6 text-center">
+                <h1>Todo List</h1>
+                <input type="text" class="form-control">
+                <ul class="list-unstyled">
+                    <li ng-repeat="todo in controller.todos">
+                       <i class="fa fa-times text-danger" ng-click="controller.removeTask(todo.id)"></i> {{todo.task}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+
+    <script src="/scripts/jquery/dist/jquery.min.js"></script>
+    <script src="/scripts/angular/angular.min.js"></script>
+    <script src="/scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/scripts/underscore/underscore-min.js"></script>
+    
+    <script src="/app/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "yant",
+  "version": "0.0.0",
+  "description": "YetANotherTodolist",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Greg Kurts",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "massive": "^2.1.0",
+    "morgan": "^1.6.1",
+    "underscore": "^1.8.3"
+  }
+}
